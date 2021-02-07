@@ -12,7 +12,7 @@ For server side code visit to [https://github.com/Tariqnawaz/node-github-repo-se
 5. Vanilla CSS
 
 
-**Summary**
+**Description**
 * A reactJS application which search and displays the github repository.
 * User can search repositories or users by name.
 * Response data is stored in redux store.
