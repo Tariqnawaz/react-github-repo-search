@@ -1,0 +1,101 @@
+/*
+    when searchcontainer load, keeps the searchbox & dropdown in center of the page
+*/
+.search-box-container-lg{
+    background-color: #FFE6E6;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+/*
+    when user starts for searching it removes the center position of the page
+    with min-height property
+*/
+.search-box-container-sm{
+    background-color: #FFE6E6;
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+}
+
+/*
+ searchBox & dropdown in line css
+*/
+.search-input-box{
+    display: flex;
+    flex-direction: column;
+    margin-right: 2px;
+    margin-top: 15px;
+}
+
+/*
+ searchBox input css
+*/
+.search-input-box input{
+    height: 100%;
+    border-radius: 10px;
+    width: 200px;
+    height: 30px;
+    padding-left: 5px;
+    outline: none;
+}
+
+/*
+ searchBox input css
+*/
+.search-drop-down select{
+    height: 35px;
+    border-radius: 5px;
+    padding: 5px;
+    outline: none;
+}
+
+/*
+ card-container handles css for response data & displays the grid
+ screen size grater than 768px while have three colum
+*/
+.card-container{
+    display: grid;
+    /* grid-gap: 5px;*/
+    grid-gap: 1rem;
+    /* grid-template-columns: repeat(auto-fill, minmax(min(25rem, 100%), 1fr)); */
+    grid-template-columns: repeat(3,minMax(100px,1fr));
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/*
+  div: loading, error, & clear-cache related css
+*/
+.loading-container, .error-container, .clear-cache-container{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 5px;
+    border-radius: 10px;
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(189, 174, 174, 0.75);
+    -moz-box-shadow: 3px 3px 5px 0px rgba(189, 174, 174, 0.75);
+    box-shadow: 3px 3px 5px 0px rgba(189, 174, 174, 0.75);
+}
+
+.loading-container h4{
+    color: blue;
+}
+
+.error-container h4{
+    color: red;
+}
+
+/*
+ when screen is 768px or less grid becomes 2 column
+*/
+@media only screen and (max-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(2,minMax(100px,1fr))
+    }
+}
